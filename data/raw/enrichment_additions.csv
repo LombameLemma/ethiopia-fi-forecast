@@ -1,0 +1,9 @@
+indicator_code,value_numeric
+INF_4G_COVERAGE,72
+INF_SMARTPHONE_PEN,38
+INF_MOBILE_INTERNET,31
+INF_AGENT_NETWORK,520000
+USG_QR_MERCHANTS,180000
+extra = pd.read_csv('data/raw/enrichment_additions.csv')
+enriched = pd.concat([df, extra], ignore_index=True)
+enriched.to_csv('data/processed/ethiopia_fi_enriched.csv', index=False)
